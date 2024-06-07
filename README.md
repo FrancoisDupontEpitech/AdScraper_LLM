@@ -41,19 +41,23 @@ AdScraper_LLM is a project designed to scrape advertisements and save them to an
 
     ```env
     OPENAI_API_KEY=your_openai_api_key_here
+    OPENAI_ASSISTANT_ID=your_openai_assistant_id_api_key_here
     GOOGLE_SERPER_API_KEY=your_google_serper_api_key_here
 
 ### Running the Code
     To run the main script, use the following command:
 
     ```bash
-    python src/package/adscraper_llm.py
+    python src/package/adscraper_llm.py <your_prompt>
+
+    the "<your_prompt>" might be a website URL or a website name.
+    example : "itrnews" or "https://itrnews.com/" or even a sentence like "I want to scrape itrnews website"
 
     This will start the ad scraping process using the provided configurations and save the results to an Excel file.
 
 ### Project Structure
     src/package/: Contains the main code for the project.
-    src/package/static/: Contains generated Excel files.
+    static/: Contains generated Excel files.
     .env: Environment variables file (not included in the repository).
     .gitignore: Specifies files and directories to be ignored by Git.
     requirements.txt: Lists the dependencies required for the project.
